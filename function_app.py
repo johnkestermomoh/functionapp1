@@ -68,12 +68,12 @@ def timer_function(mytimer: func.TimerRequest, outputQueueItem: func.Out[str]):
 
 
 
-@app.queue_trigger(arg_name="msg", queue_name="inputqueue",
-                   connection="AzureWebJobsStorage")  # Queue trigger
-def test_function(msg: func.QueueMessage,
-                  ) -> None:
-    logging.info('Python queue trigger function processed a queue item: %s',
-                 msg.get_body().decode('utf-8'))
+# @app.queue_trigger(arg_name="msg", queue_name="inputqueue",
+#                    connection="AzureWebJobsStorage")  # Queue trigger
+# def test_function(msg: func.QueueMessage,
+#                   ) -> None:
+#     logging.info('Python queue trigger function processed a queue item: %s',
+#                  msg.get_body().decode('utf-8'))
     
     
 
